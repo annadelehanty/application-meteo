@@ -1,0 +1,13 @@
+body {
+  background: black;
+}
+#container {
+  margin: 0 auto;
+  max-width: 600px;
+  box-shadow: 0 30px 50px #41326414;
+  padding: 30px;
+  background: red;
+  border-radius: 4px;
+  position: relative;
+  top: 60px;
+}
