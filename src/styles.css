@@ -25,9 +25,17 @@ input[type="submit"] {
   border: none;
   border-radius: 4px;
 }
-section {
-  width: 295px;
-  display: inline-block;
+#weather {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 10px;
+}
+#forecast {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 10px;
 }
 h1 {
   font-size: 70px;
@@ -67,6 +75,9 @@ footer {
   border-radius: 4px;
   position: relative;
   top: 60px;
+}
+#currentWeather {
+  max-width: 290px;
 }
 #currentIcon {
   font-size: 50px;
