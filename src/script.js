@@ -1,4 +1,5 @@
-function formatDate(date) {
+function updateTime() {
+  let currentTime = new Date();
   let days = [
     `sunday`,
     `monday`,
@@ -8,16 +9,40 @@ function formatDate(date) {
     `friday`,
     `saturday`,
   ];
-  let day = days[date.getDay()];
-  let minutes = date.getMinutes();
-  let hours = date.getHours();
+  let dateTime = document.querySelector("#date");
+  let minutes = currentTime.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+  let hours = currentTime.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  return `${day} ${hours}:${minutes}`;
+  let date1 = currentTime.getDay() + 1;
+  if (date1 > 6) {
+    date1 = date1 - 7;
+  }
+  let date2 = currentTime.getDay() + 2;
+  if (date2 > 6) {
+    date2 = date2 - 7;
+  }
+  let date3 = currentTime.getDay() + 3;
+  if (date3 > 6) {
+    date3 = date3 - 7;
+  }
+  let date4 = currentTime.getDay() + 4;
+  if (date4 > 6) {
+    date4 = date4 - 7;
+  }
+  dateTime.innerHTML = `${days[currentTime.getDay()]} ${hours}:${minutes}`;
+  let day1 = document.querySelector("#date1");
+  day1.innerHTML = `${days[date1]}`;
+  let day2 = document.querySelector("#date2");
+  day2.innerHTML = `${days[date2]}`;
+  let day3 = document.querySelector("#date3");
+  day3.innerHTML = `${days[date3]}`;
+  let day4 = document.querySelector("#date4");
+  day4.innerHTML = `${days[date4]}`;
 }
 function refreshWeather(data) {
   let tempNow = document.querySelector("#temp-now");
@@ -30,9 +55,6 @@ function refreshWeather(data) {
   windSpeed.innerHTML = data.wind.speed;
   const image = document.getElementById("current-icon");
   image.setAttribute("src", data.condition.icon_url);
-  let date = document.querySelector("#date");
-  let dateData = new Date(data.time * 1000);
-  date.innerHTML = formatDate(dateData);
 }
 function searchCity(cityInput) {
   let apiKey = "4288f539432426do920341baabbb0tad";
@@ -55,4 +77,4 @@ function handleSearch(event) {
 let form = document.querySelector("form");
 form.addEventListener("submit", handleSearch);
 searchCity("london");
-setInterval(refreshWeather, 1000);
+setInterval(updateTime, 1000);
