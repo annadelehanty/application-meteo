@@ -101,3 +101,7 @@ form,
   display: flex;
   justify-content: space-between;
 }
+#humidity,
+#wind-speed {
+  font-weight: bold;
+}

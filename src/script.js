@@ -5,6 +5,8 @@ function refreshWeather(data) {
   humidity.innerHTML = data.temperature.humidity;
   let condition = document.querySelector("#condition");
   condition.innerHTML = data.condition.description;
+  let windSpeed = document.querySelector("#wind-speed");
+  windSpeed.innerHTML = data.wind.speed;
 }
 function adjustTextSize() {}
 function searchCity(cityInput) {
