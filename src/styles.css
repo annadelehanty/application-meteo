@@ -35,7 +35,6 @@ input[type="submit"] {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  gap: 10px;
 }
 h1 {
   font-size: 70px;
@@ -52,8 +51,10 @@ ul {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   text-align: center;
+
+  width: 290px;
 }
 li {
   padding: 10px;
