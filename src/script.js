@@ -3,6 +3,8 @@ function refreshWeather(data) {
   tempNow.innerHTML = Math.round(data.temperature.current);
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = data.temperature.humidity;
+  let condition = document.querySelector("#condition");
+  condition.innerHTML = data.condition.description;
 }
 function adjustTextSize() {}
 function searchCity(cityInput) {
