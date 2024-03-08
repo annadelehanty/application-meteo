@@ -92,9 +92,10 @@ footer {
 #currentWeather {
   max-width: 290px;
 }
-#currentIcon {
+i {
   font-size: 50px;
   display: inline;
+  padding-bottom: 5px;
 }
 #line2 {
   display: flex;
