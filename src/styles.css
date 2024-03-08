@@ -1,6 +1,6 @@
 body {
   background: black;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Ubuntu Mono", monospace;
   font-weight: 400;
   background-image: url("./background.jpeg");
   background-attachment: fixed;
@@ -41,7 +41,8 @@ h1 {
 }
 h1,
 h2 {
-  font-family: anta, sans-serif;
+  font-family: "Russo One", sans-serif;
+  font-weight: 800;
 }
 footer {
   text-align: center;
