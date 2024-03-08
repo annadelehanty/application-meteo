@@ -26,9 +26,25 @@ input[type="submit"] {
   border: none;
   border-radius: 4px;
 }
+section {
+  width: 290px;
+  display: inline-block;
+}
 ul {
   list-style: none;
   padding: 0;
+}
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+}
+h1,
+h2 {
+  font-family: anta, sans-serif;
+}
+footer {
+  text-align: center;
 }
 #container {
   margin: 0 auto;
