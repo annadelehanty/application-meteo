@@ -1,6 +1,8 @@
 function refreshWeather(data) {
   let tempNow = document.querySelector("#temp-now");
   tempNow.innerHTML = Math.round(data.temperature.current);
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = data.temperature.humidity;
 }
 function adjustTextSize() {}
 function searchCity(cityInput) {
