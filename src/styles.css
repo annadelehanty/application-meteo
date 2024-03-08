@@ -10,7 +10,6 @@ form {
   display: flex;
   justify-content: space-between;
 }
-
 input[type="search"] {
   width: 75%;
   border: none;
@@ -27,8 +26,19 @@ input[type="submit"] {
   border-radius: 4px;
 }
 section {
-  width: 290px;
+  width: 295px;
   display: inline-block;
+}
+h1 {
+  font-size: 70px;
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+}
+h2 {
+  text-align: right;
+  font-size: 50px;
+  margin: 0px;
+  display: inline;
 }
 ul {
   list-style: none;
@@ -37,10 +47,8 @@ ul {
   grid-template-columns: repeat(2, 1fr);
   text-align: center;
 }
-h1 {
-  font-size: 50px;
-  text-align: center;
-  margin: 10px 0px 10px 0px;
+li {
+  padding: 10px;
 }
 h1,
 h2 {
@@ -59,4 +67,12 @@ footer {
   border-radius: 4px;
   position: relative;
   top: 60px;
+}
+#currentIcon {
+  font-size: 50px;
+  display: inline;
+}
+#line2 {
+  display: flex;
+  justify-content: space-between;
 }
