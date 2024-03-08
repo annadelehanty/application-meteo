@@ -7,6 +7,8 @@ function refreshWeather(data) {
   condition.innerHTML = data.condition.description;
   let windSpeed = document.querySelector("#wind-speed");
   windSpeed.innerHTML = data.wind.speed;
+  const image = document.getElementById("current-icon");
+  image.setAttribute("src", data.condition.icon_url);
 }
 function adjustTextSize() {}
 function searchCity(cityInput) {

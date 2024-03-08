@@ -64,6 +64,10 @@ footer {
 a {
   color: rgb(196, 194, 111);
 }
+img {
+  height: 100px;
+  display: inline;
+}
 h1,
 h2 {
   font-family: "Russo One", sans-serif;
