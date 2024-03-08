@@ -6,10 +6,6 @@ body {
   background-attachment: fixed;
   color: aliceblue;
 }
-form {
-  display: flex;
-  justify-content: space-between;
-}
 input[type="search"] {
   width: 75%;
   border: none;
@@ -34,6 +30,54 @@ input[type="submit"]:hover {
   background-color: rgb(235, 232, 98);
   cursor: pointer;
 }
+i {
+  font-size: 50px;
+  display: inline;
+  padding-bottom: 5px;
+  color: rgb(238, 236, 134);
+}
+h1 {
+  font-size: 70px;
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+}
+h2 {
+  font-size: 50px;
+  margin: 0px;
+  display: inline;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  width: 290px;
+}
+li {
+  padding: 10px;
+}
+footer {
+  text-align: center;
+  color: rgb(175, 182, 187);
+}
+a {
+  color: rgb(196, 194, 111);
+}
+h1,
+h2 {
+  font-family: "Russo One", sans-serif;
+  font-weight: 800;
+}
+#container {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 30px 30px 10px 30px;
+  background: rgb(34, 34, 34);
+  border-radius: 4px;
+  position: relative;
+  top: 60px;
+}
 #weather {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -45,68 +89,14 @@ input[type="submit"]:hover {
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
 }
-i {
-  color: rgb(238, 236, 134);
-}
-h1 {
-  font-size: 70px;
-  text-align: center;
-  margin: 10px 0px 10px 0px;
-}
-h2 {
-  text-align: right;
-  font-size: 50px;
-  margin: 0px;
-  display: inline;
-}
-ul {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  text-align: center;
-
-  width: 290px;
-}
-li {
-  padding: 10px;
-}
-h1,
-h2 {
-  font-family: "Russo One", sans-serif;
-  font-weight: 800;
-}
-footer {
-  text-align: center;
-}
-#container {
-  margin: 0 auto;
-  max-width: 600px;
-  box-shadow: 0 30px 50px #41326414;
-  padding: 30px 30px 10px 30px;
-  background: rgb(34, 34, 34);
-  border-radius: 4px;
-  position: relative;
-  top: 60px;
-}
 #currentWeather {
   max-width: 290px;
 }
-i {
-  font-size: 50px;
-  display: inline;
-  padding-bottom: 5px;
-}
+form,
 #line2 {
   display: flex;
   justify-content: space-between;
 }
-a {
-  color: rgb(196, 194, 111);
-}
 #conditions {
   color: rgb(197, 205, 211);
-}
-#footer {
-  color: rgb(175, 182, 187);
 }
