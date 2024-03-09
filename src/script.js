@@ -88,7 +88,7 @@ function displayForecast(response) {
     forecastHTML =
       forecastHTML +
       `<li>
-              <i class="wi wi-day-sunny"></i><br />
+              <img src=${day.condition.icon_url} /><br />
               <span id="date1">${day}</span> <br />
               <span class="high">${Math.round(
                 day.temperature.maximum
