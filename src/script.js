@@ -18,31 +18,7 @@ function updateTime() {
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let date1 = currentTime.getDay() + 1;
-  if (date1 > 6) {
-    date1 = date1 - 7;
-  }
-  let date2 = currentTime.getDay() + 2;
-  if (date2 > 6) {
-    date2 = date2 - 7;
-  }
-  let date3 = currentTime.getDay() + 3;
-  if (date3 > 6) {
-    date3 = date3 - 7;
-  }
-  let date4 = currentTime.getDay() + 4;
-  if (date4 > 6) {
-    date4 = date4 - 7;
-  }
   dateTime.innerHTML = `${days[currentTime.getDay()]} ${hours}:${minutes}`;
-  let day1 = document.querySelector("#date1");
-  day1.innerHTML = `${days[date1]}`;
-  let day2 = document.querySelector("#date2");
-  day2.innerHTML = `${days[date2]}`;
-  let day3 = document.querySelector("#date3");
-  day3.innerHTML = `${days[date3]}`;
-  let day4 = document.querySelector("#date4");
-  day4.innerHTML = `${days[date4]}`;
 }
 function refreshWeather(data) {
   let tempNow = document.querySelector("#temp-now");
@@ -56,6 +32,19 @@ function refreshWeather(data) {
   const image = document.getElementById("current-icon");
   image.setAttribute("src", data.condition.icon_url);
   getForecast(data.city);
+}
+function formatForecast(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = [
+    `sunday`,
+    `monday`,
+    `tuesday`,
+    `wednesday`,
+    `thursday`,
+    `friday`,
+    `saturday`,
+  ];
+  return days[date.getDay()];
 }
 function searchCity(cityInput) {
   let apiKey = "4288f539432426do920341baabbb0tad";
@@ -81,16 +70,15 @@ function getForecast(cityInput) {
   axios(apiURL).then(displayForecast);
 }
 function displayForecast(response) {
-  console.log(response.data);
   let forecast = document.querySelector("#forecast");
   let forecastHTML = "";
-  response.data.daily.forEach(function (day, index) {
+  response.data.daily.slice(1).forEach(function (day, index) {
     if (index < 4) {
       forecastHTML =
         forecastHTML +
         `<li>
-              <img src=${day.condition.icon_url} /><br />
-              <span id="date1">${day}</span> <br />
+              <img src=${day.condition.icon_url} class="forecastIcon"/><br />
+              ${formatForecast(day.time)} <br />
               <span class="high">${Math.round(
                 day.temperature.maximum
               )}°C</span> - <span class="low">${Math.round(

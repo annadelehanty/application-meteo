@@ -90,6 +90,9 @@ h2 {
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
 }
+.forecastIcon {
+  height: 80px;
+}
 #currentWeather {
   max-width: 290px;
 }
