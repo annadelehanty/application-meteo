@@ -74,6 +74,37 @@ function handleSearch(event) {
   container.style.fontSize =
     containerWidth / container.textContent.length + "px";
 }
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+  forecast.innerHTML = `          <ul>
+            <li>
+              <i class="wi wi-day-sunny"></i><br />
+              <span id="date1">sunday</span> <br />
+              <span class="high">14°C</span> - <span class="low">14°C</span>
+            </li>
+            <li>
+              <i class="wi wi-day-sunny"></i><br /><span id="date2"
+                >monday</span
+              >
+              <br />
+              <span class="high">14°C</span> - <span class="low">14°C</span>
+            </li>
+            <li>
+              <i class="wi wi-day-sunny"></i><br /><span id="date3"
+                >tuesday</span
+              >
+              <br />
+              <span class="high">14°C</span> - <span class="low">14°C</span>
+            </li>
+            <li>
+              <i class="wi wi-day-sunny"></i><br /><span id="date4"
+                >wednesday</span
+              >
+              <br />
+              <span class="high">14°C</span> - <span class="low">14°C</span>
+            </li>
+          </ul>`;
+}
 let form = document.querySelector("form");
 form.addEventListener("submit", handleSearch);
 searchCity("london");
