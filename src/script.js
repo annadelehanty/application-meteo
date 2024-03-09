@@ -83,23 +83,16 @@ function getForecast(cityInput) {
 function displayForecast(response) {
   console.log(response.data);
   let forecast = document.querySelector("#forecast");
-  let days = [
-    `sunday`,
-    `monday`,
-    `tuesday`,
-    `wednesday`,
-    `thursday`,
-    `friday`,
-    `saturday`,
-  ];
   let forecastHTML = "";
-  days.forEach(function (day) {
+  response.data.daily.forEach(function (day) {
     forecastHTML =
       forecastHTML +
       `<li>
               <i class="wi wi-day-sunny"></i><br />
               <span id="date1">${day}</span> <br />
-              <span class="high">14°C</span> - <span class="low">14°C</span>
+              <span class="high">${Math.round(
+                day.temperature.maximum
+              )}°C</span> - <span class="low">14°C</span>
             </li>
           `;
   });
