@@ -79,6 +79,12 @@ h2 {
   justify-content: center;
   gap: 10px;
 }
+.high {
+  font-weight: bold;
+}
+.low {
+  opacity: 85%;
+}
 #forecast {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
