@@ -84,19 +84,21 @@ function displayForecast(response) {
   console.log(response.data);
   let forecast = document.querySelector("#forecast");
   let forecastHTML = "";
-  response.data.daily.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<li>
+  response.data.daily.forEach(function (day, index) {
+    if (index < 4) {
+      forecastHTML =
+        forecastHTML +
+        `<li>
               <img src=${day.condition.icon_url} /><br />
               <span id="date1">${day}</span> <br />
               <span class="high">${Math.round(
                 day.temperature.maximum
               )}°C</span> - <span class="low">${Math.round(
-        day.temperature.minimum
-      )}°C</span>
+          day.temperature.minimum
+        )}°C</span>
             </li>
           `;
+    }
   });
   forecast.innerHTML = forecastHTML;
 }
