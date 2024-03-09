@@ -92,7 +92,9 @@ function displayForecast(response) {
               <span id="date1">${day}</span> <br />
               <span class="high">${Math.round(
                 day.temperature.maximum
-              )}°C</span> - <span class="low">14°C</span>
+              )}°C</span> - <span class="low">${Math.round(
+        day.temperature.minimum
+      )}°C</span>
             </li>
           `;
   });
